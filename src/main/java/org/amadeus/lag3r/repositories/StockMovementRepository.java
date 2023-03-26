@@ -9,6 +9,8 @@ import reactor.core.publisher.Mono;
 @Repository
 public interface StockMovementRepository extends R2dbcRepository<StockMovement, String> {
 
+     Mono<StockMovement> findById(String id);
+
      Flux<StockMovement> findAllByDescriptionHash( Long descriptionHash);
 
      Flux<StockMovement> findAllByDescriptionHashAndTargetLocationId( Long descriptionHash, Long targetLocationId );

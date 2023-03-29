@@ -5,32 +5,8 @@ spring:
         - local
   data:
     mongodb:
-      host: localhost
-      port: 27017
+      uri: mongodb+srv://amadeus:<password>@lag3r.vvr8lmd.mongodb.net/?retryWrites=true&w=majority
       database: local
 
----
-  spring:
-    config:
-      activate:
-        on-profile:
-          - non-prod
-    data:
-      mongodb:
-        host: localhost
-        port: 27017
-        database: local
-
----
-spring:
-  config:
-    activate:
-      on-profile:
-        - prod
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: local
 ---
 logging: debug

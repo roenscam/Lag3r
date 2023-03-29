@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 8081
+
+  data:
+    mongodb:
+      uri: mongodb+srv://amadeus:${MONGO_PW}@lag3r.vvr8lmd.mongodb.net/?retryWrites=true&w=majority
+      database: stock
